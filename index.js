@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // ADD CODE HERE!
 
-  
+  // --------- listen for arrow press
   document.addEventListener("keydown", function(event){
     if (event.key === "ArrowLeft"){
       moves.push('left')
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ul.append(li)
   }
 
+  // -------------  run each move -------------
 
   const moveButton = document.querySelector('button#move-button')
 
@@ -39,6 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
       move(moves.shift())
       ul.removeChild(ul.firstChild)
   })
+
+
+// ----------remove direction tiles --------
 
   const directionButton = document.querySelector('li')
 
